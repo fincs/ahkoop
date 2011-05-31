@@ -3,8 +3,7 @@ OOP preprocessor for AutoHotkey_L, version 1.1b - by fincs
 
 This OOP preprocessor allows you to create OOP classes in a more friendly way (aka syntax sugar) that is compatible with both old AHK_L builds and AHK v1.1. This is done via processing the OOP script before running it in order to rewrite it to use the available AutoHotkey_L constructs.
 
-0. Changelog
-------------
+## 0. Changelog
 
 * version 1.1b
     * Added support for converting OOP scripts to AutoHotkey v1.1 class syntax.
@@ -16,20 +15,17 @@ This OOP preprocessor allows you to create OOP classes in a more friendly way (a
 * version 1.0
     * Initial release.
 
-1. OOP files
-------------
+## 1. OOP files
 
 In order to differentiate between OOP scripts and regular scripts the former have the .oop.ahk extension as opposed to just .ahk. Preprocessed files have the .pre.ahk extension.
 
-2. Usage of the preprocessor
-----------------------------
+## 2. Usage of the preprocessor
 
 Drag & drop an .oop.ahk file to the preprocessor or run it with no parameters in order to convert all scripts in the current directory.
 
 Alternatively you can drag & drop an .oop.ahk file to the RunOOP.ahk script in order to run the script after converting.
 
-3. Language OOP extensions
---------------------------
+## 3. Language OOP extensions
 
 ### 3.1. Class definitions
 
@@ -81,11 +77,11 @@ The object instance is accessed by the this variable.
 
 ### 3.2. Pseudo-operators
 
-Instantiating a class: `[new ClassName]`
-Instantiating a class with parameters: `[new ClassName](params...)`
-Getting the type of an object: `[typeof Var]`
-Calling the constructor of a derived class' base class: `[super]`
-Calling the constructor of a derived class' base class with parameters: `[super](params...)`
+- Instantiating a class: `[new ClassName]`
+- Instantiating a class with parameters: `[new ClassName](params...)`
+- Getting the type of an object: `[typeof Var]`
+- Calling the constructor of a derived class' base class: `[super]`
+- Calling the constructor of a derived class' base class with parameters: `[super](params...)`
 
 ### 3.3. Strong typing
 
@@ -126,8 +122,7 @@ Version 1.1b of this program added support for converting OOP scripts to AutoHot
 
 Additionally, OOP_preprocessor.ahk calls either OOP_preprocessor_v1.ahk or OOP_preprocessor_v1.1.ahk depending on the AutoHotkey build used to run the script.
 
-4. Known Issues
----------------
+## 4. Known Issues
 
 * Pseudo-operator processing affects string literals (except continuation sections).
 * Class/endclass and property/endprop syntax is verbose.
