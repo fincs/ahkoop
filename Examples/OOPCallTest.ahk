@@ -22,7 +22,4 @@ car.Enter(Person("John Doe"))
 car.Enter(Person("Joe Bloggs"))
 car.Travel("Nowhere")
 
-typeof(obj)
-{
-	return obj.__Type
-}
+#include ../Lib/typeof.ahk

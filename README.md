@@ -1,11 +1,13 @@
-OOP preprocessor for AutoHotkey_L, version 1.1a - by fincs
+OOP preprocessor for AutoHotkey_L, version 1.1b - by fincs
 ==========================================================
 
-This OOP preprocessor allows you to create OOP classes in a more friendly way (aka syntax sugar). This is done via processing the OOP script before running it in order to rewrite it to use regular AutoHotkey_L constructs.
+This OOP preprocessor allows you to create OOP classes in a more friendly way (aka syntax sugar) that is compatible with both old AHK_L builds and AHK v1.1. This is done via processing the OOP script before running it in order to rewrite it to use the available AutoHotkey_L constructs.
 
 0. Changelog
 ------------
 
+* version 1.1b
+    * Added support for converting OOP scripts to AutoHotkey v1.1 class syntax.
 * version 1.1a
     * Fixed destructor bug.
     * Added typeof() StdLib file.
@@ -117,6 +119,12 @@ In order to access the type name you can use the included typeof.ahk StdLib file
 
     obj := MyClass()
     MsgBox % typeof(obj)
+
+### 3.5. Of AutoHotkey_L and AutoHotkey v1.1
+
+Version 1.1b of this program added support for converting OOP scripts to AutoHotkey v1.1's class syntax. This thus renders this program useful for being easily compatible with both AutoHotkey v1.1 and old versions of AutoHotkey_L. The major incompatibility is that in AutoHotkey v1.1 the class name is stored under the field `__Class` instead of `__Type`. The provided typeof.ahk file takes care of this, and if you have done the right thing and relied on said supplied file, you shouldn't notice any problems.
+
+Additionally, OOP_preprocessor.ahk calls either OOP_preprocessor_v1.ahk or OOP_preprocessor_v1.1.ahk depending on the AutoHotkey build used to run the script.
 
 4. Known Issues
 ---------------
